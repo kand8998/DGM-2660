@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: Character Base.ma
-//Last modified: Mon, Apr 13, 2020 01:42:15 PM
+//Last modified: Mon, Apr 13, 2020 01:58:25 PM
 //Codeset: 1252
 requires maya "2018";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "9587C9AF-4765-C825-88FF-6A95CE253924";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.2268726992476156 10.439827388135784 35.221797577880402 ;
-	setAttr ".r" -type "double3" 3959.0616471813014 1792.2000000002106 -1.2540064400795132e-17 ;
+	setAttr ".t" -type "double3" -3.6003993905738856 13.424537732807782 33.510987772346965 ;
+	setAttr ".r" -type "double3" 3951.8616471780019 1792.9999999999654 3.0041625862348771e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6A31D94E-48DD-28F2-8154-F8BCD36AEF6C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 37.043947780515104;
+	setAttr ".coi" 35.488529914987929;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -86,7 +86,7 @@ createNode mesh -n "Body_Base1Shape" -p "Body_Base1";
 	setAttr ".iog[0].og[2].gcl" -type "componentList" 16 "f[875:901]" "f[903]" "f[905]" "f[907]" "f[909]" "f[911]" "f[913]" "f[915]" "f[949:1372]" "f[1389:1480]" "f[1911:1926]" "f[2001:2018]" "f[2027:2034]" "f[2083:2206]" "f[2271:2286]" "f[2303:2334]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.76450198888778687 ;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 8515 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.45686999 0.83462 0.52754003
@@ -912,7 +912,7 @@ createNode mesh -n "Body_Base1Shape" -p "Body_Base1";
 		 0.26450199 0.65385091 0.26450199 0.65385091 0.5 0.76450199 0.5 0.76450199;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr -s 48 ".pt";
+	setAttr -s 58 ".pt";
 	setAttr ".pt[8]" -type "float3" -0.00016250089 0.00015774707 -0.0002812563 ;
 	setAttr ".pt[11]" -type "float3" 0.00016251201 0.00015775785 -0.00028127554 ;
 	setAttr ".pt[13]" -type "float3" -0.0011009724 0.00013358757 0.00013893907 ;
@@ -929,6 +929,10 @@ createNode mesh -n "Body_Base1Shape" -p "Body_Base1";
 	setAttr ".pt[732]" -type "float3" 0.00039563514 0.0035668379 -0.00085545424 ;
 	setAttr ".pt[733]" -type "float3" 0.0015373717 0.00021162917 -0.0010160445 ;
 	setAttr ".pt[762]" -type "float3" -0.00039563514 0.0035668379 -0.00085545424 ;
+	setAttr ".pt[1219]" -type "float3" 0 0.10001694 0 ;
+	setAttr ".pt[1220]" -type "float3" 0 0.10001694 0 ;
+	setAttr ".pt[1237]" -type "float3" 0 0.040107924 0.022539247 ;
+	setAttr ".pt[1238]" -type "float3" 0 0.040107924 0.022539247 ;
 	setAttr ".pt[1423]" -type "float3" 0.0020086565 -0.00049185776 -0.0013711201 ;
 	setAttr ".pt[1424]" -type "float3" 0.00077730801 -0.0008580226 -0.0012016332 ;
 	setAttr ".pt[1425]" -type "float3" -0.00077728578 -0.00085799803 -0.0012015989 ;
@@ -945,6 +949,12 @@ createNode mesh -n "Body_Base1Shape" -p "Body_Base1";
 	setAttr ".pt[1436]" -type "float3" -0.0065707117 0.00074047199 0.003270566 ;
 	setAttr ".pt[1437]" -type "float3" 0.0053654592 0.00013144803 -0.0003410916 ;
 	setAttr ".pt[1438]" -type "float3" -0.0053654592 0.00013144803 -0.0003410916 ;
+	setAttr ".pt[1449]" -type "float3" 0 0.12988602 0 ;
+	setAttr ".pt[1451]" -type "float3" 0 0.12988602 0 ;
+	setAttr ".pt[1465]" -type "float3" 0 0.10724679 0 ;
+	setAttr ".pt[1466]" -type "float3" 0 0.10724679 0 ;
+	setAttr ".pt[1467]" -type "float3" 0 0.10754331 0 ;
+	setAttr ".pt[1468]" -type "float3" 0 0.10754331 0 ;
 	setAttr ".pt[2348]" -type "float3" -0.010869256 -0.0098486813 0.0013507828 ;
 	setAttr ".pt[2349]" -type "float3" -0.0074433181 -0.0080943797 -0.01279052 ;
 	setAttr ".pt[2350]" -type "float3" -1.2039156e-05 -0.00071666681 -0.017952165 ;
